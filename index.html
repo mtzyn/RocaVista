@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RocaVista - Camping, mirador y senderos</title>
+  <title>Roca Vista | Camping, mirador y senderos</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -22,7 +22,7 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Geist, "Geist Fallback", system-ui, -apple-system, sans-serif;
+      font-family: 'Raleway', "Geist", "Geist Fallback", system-ui, -apple-system, sans-serif;
       background: radial-gradient(circle at 20% 20%, rgba(86, 197, 160, 0.05), transparent 40%),
                   radial-gradient(circle at 80% 0%, rgba(125, 220, 143, 0.08), transparent 35%),
                   var(--bg);
@@ -72,12 +72,17 @@
       text-transform: uppercase;
       flex: 1;
       justify-content: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: max-content;
     }
 
     .nav-right {
       display: flex;
       align-items: center;
       gap: 12px;
+      margin-left: auto;
       position: relative;
     }
 
@@ -246,7 +251,7 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0,0,0,0.75)),
-        url('public/hero.webp') center/cover no-repeat;
+        url('public/rio.jpg') center/cover no-repeat;
       filter: saturate(1.1) brightness(0.85);
       transform: scale(1.04);
       z-index: -2;
@@ -280,7 +285,7 @@
 
     h1 {
       margin: 0;
-      font-family: 'Raleway', Geist, "Geist Fallback", system-ui, -apple-system, sans-serif;
+      font-family: 'Raleway', "Geist", "Geist Fallback", system-ui, -apple-system, sans-serif;
       font-size: clamp(28px, 4.8vw, 52px);
       letter-spacing: 0.24em;
       font-weight: 300;
@@ -400,7 +405,7 @@
     }
 
     .section-heading {
-      font-family: 'Raleway', Geist, "Geist Fallback", system-ui, -apple-system, sans-serif;
+      font-family: 'Raleway', "Geist", "Geist Fallback", system-ui, -apple-system, sans-serif;
       font-size: clamp(32px, 4vw, 48px);
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -410,8 +415,6 @@
 
     .title-line { display: block; }
     .title-line + .title-line { margin-top: 6px; }
-    }
-
     .pill {
       display: inline-flex;
       align-items: center;
@@ -577,7 +580,6 @@
       color: var(--accent);
     }
 
-
     .timeline {
       margin-top: 36px;
       display: grid;
@@ -647,7 +649,6 @@
 
     .gallery figure:hover img { transform: scale(1.05); filter: saturate(1.12); }
     .gallery figure:hover::after { opacity: 1; }
-
     .visit-intro {
       margin: 0 0 28px;
       max-width: 760px;
@@ -766,7 +767,6 @@
       backdrop-filter: blur(var(--blur));
     }
 
-
     .location-card h4 {
       margin: 0;
       font-size: 14px;
@@ -839,7 +839,6 @@
     .floater:nth-child(3) { right: 14%; top: 38%; animation-delay: 2.2s; }
     .floater:nth-child(4) { left: 28%; bottom: 24%; animation-delay: 3s; }
     .floater:nth-child(5) { right: 24%; bottom: 18%; animation-delay: 4s; }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
@@ -863,7 +862,6 @@
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
-
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }
@@ -894,16 +892,16 @@
 <body>
   <header>
     <a class="nav-brand" href="/">
-      <img class="nav-logo" src="public/LOGOCOCORA.png" alt="Logo RocaVista">
+      <img class="nav-logo" src="public/LOGORV.png" alt="Logo Roca Vista">
     </a>
     <nav class="nav-links">
-      <a href="#experiencia">Atractivos</a>
-      <a href="#sensaciones">Senderos</a>
+      <a href="#experiencia">Experiencias</a>
+      <a href="#atractivos">Atractivos</a>
       <a href="/galeria/">Galer&iacute;a</a>
       <a href="#visita">Visita</a>
     </nav>
     <div class="nav-right">
-      <a class="nav-cta" href="https://www.instagram.com/rocavista/" target="_blank" rel="noopener">S&iacute;ganos</a>
+      <a class="nav-cta" href="https://www.instagram.com/rocavista/" target="_blank" rel="noopener">Instagram</a>
       <a class="lang-toggle" href="/en/">EN</a>
       <input class="nav-toggle" id="nav-toggle" type="checkbox" aria-hidden="true">
       <label class="nav-toggle-button" for="nav-toggle" aria-label="Abrir men&uacute;">
@@ -912,11 +910,11 @@
         <span></span>
       </label>
       <div class="nav-panel" role="navigation" aria-label="Navegaci&oacute;n m&oacute;vil">
-        <a href="#experiencia">Atractivos</a>
-        <a href="#sensaciones">Senderos</a>
+        <a href="#experiencia">Experiencias</a>
+        <a href="#atractivos">Atractivos</a>
         <a href="/galeria/">Galer&iacute;a</a>
         <a href="#visita">Visita</a>
-        <a class="nav-panel-cta" href="https://www.instagram.com/rocavista/" target="_blank" rel="noopener">S&iacute;ganos</a>
+        <a class="nav-panel-cta" href="https://www.instagram.com/rocavista/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
   </header>
@@ -933,25 +931,23 @@
       <div class="hero-content">
         <div class="eyebrow">Quebradillas, Piedades Sur</div>
         <h1>
-          <span class="title-line">RocaVista</span>
-          <span class="title-line">Camping, mirador y senderos</span>
+          <span class="title-line">Roca Vista</span>
         </h1>
         <div class="accent-bar"></div>
-        <p class="lead">Naturaleza y desconexi&oacute;n con caminatas, mirador panor&aacute;mico, zonas de descanso y fogata.</p>
-        <p class="sublead">R&iacute;o y pozas naturales, adem&aacute;s de &aacute;reas verdes para camping o picnic (trae tu equipo).</p>
+        <p class="lead">Aire limpio, vistas abiertas y descanso real para desconectar sin complicaciones.</p>
+        <p class="sublead">Roca Vista ofrece senderos, mirador y espacios verdes para relajarte, con opciones de picnic o camping y un r&iacute;o con pozas para refrescarse.</p>
         <div class="cta-row">
-          <a class="btn" href="#experiencia">Ver atractivos</a>
-          <a class="btn btn-secondary" href="#visita">Planear visita</a>
+          <a class="btn" href="#atractivos">Ver atractivos</a>
+          <a class="btn btn-secondary" href="#visita">Tarifas y horarios</a>
         </div>
       </div>
       <div class="scroll-cue"></div>
     </section>
-
     <section id="experiencia">
-      <div class="section-title">Atractivos</div>
-      <h2 class="section-heading">RocaVista</h2>
+      <div class="section-title">Experiencias</div>
+      <h2 class="section-heading">Roca Vista</h2>
       <p class="experience-location">Quebradillas, Piedades Sur, San Ram&oacute;n, Alajuela, Costa Rica</p>
-      <p class="experience-text">RocaVista es un espacio de naturaleza y desconexi&oacute;n con senderos, mirador panor&aacute;mico, zonas de descanso y fogata, adem&aacute;s de r&iacute;o y pozas naturales.</p>
+      <p class="experience-text">Espacio de naturaleza y desconexi&oacute;n con caminatas, mirador panor&aacute;mico, r&iacute;o con pozas y &aacute;reas verdes para camping o picnic. En algunas publicaciones se menciona disponibilidad de ba&ntilde;os y parqueo seguro; confirma antes de ir.</p>
 
       <div class="experience-grid">
         <article class="experience-card">
@@ -962,9 +958,9 @@
               <line x1="17.5" y1="15" x2="9" y2="15"></line>
             </svg>
           </div>
-          <h3>Senderos y caminatas</h3>
-          <p>Recorridos naturales para desconectar entre bosque y vistas.</p>
-          <div class="experience-foot">Naturaleza activa</div>
+          <h3>Senderos y mirador</h3>
+          <p>Caminatas con vistas panor&aacute;micas y puntos para fotograf&iacute;a.</p>
+          <div class="experience-foot">Vista amplia</div>
         </article>
         <article class="experience-card">
           <div class="experience-icon" aria-hidden="true">
@@ -974,9 +970,9 @@
               <line x1="16" y1="6" x2="16" y2="22"></line>
             </svg>
           </div>
-          <h3>Mirador panor&aacute;mico</h3>
-          <p>Vistas abiertas para fotograf&iacute;a y momentos de calma.</p>
-          <div class="experience-foot">Vistas &amp; calma</div>
+          <h3>R&iacute;o y pozas</h3>
+          <p>Zonas naturales para refrescarse y conectar con el agua.</p>
+          <div class="experience-foot">Agua viva</div>
         </article>
         <article class="experience-card">
           <div class="experience-icon" aria-hidden="true">
@@ -987,16 +983,16 @@
             </svg>
           </div>
           <h3>Camping y picnic</h3>
-          <p>&Aacute;reas verdes para acampar o picnic, cerca del r&iacute;o y pozas naturales.</p>
-          <div class="experience-foot">Aire libre</div>
+          <p>&Aacute;reas verdes y zona de fogata; en algunas publicaciones se sugiere traer equipo propio.</p>
+          <div class="experience-foot">Equipo propio</div>
         </article>
       </div>
 
     </section>
 
-    <section id="sensaciones">
-      <div class="section-title">Senderos</div>
-      <h2 class="section-heading">Recorre RocaVista</h2>
+    <section id="atractivos">
+      <div class="section-title">Atractivos</div>
+      <h2 class="section-heading">Momentos clave</h2>
       <div class="timeline">
         <div class="timeline-step">
           <div class="badge" aria-hidden="true">
@@ -1006,8 +1002,8 @@
             </svg>
           </div>
           <div>
-            <h3>Senderos naturales</h3>
-            <p class="subtitle">Caminatas tranquilas para disfrutar el entorno y desconectar.</p>
+            <h3>Mirador panor&aacute;mico</h3>
+            <p class="subtitle">Vistas abiertas del entorno de Piedades Sur y sus monta&ntilde;as.</p>
           </div>
         </div>
         <div class="timeline-step">
@@ -1018,8 +1014,8 @@
             </svg>
           </div>
           <div>
-            <h3>Mirador y panor&aacute;mica</h3>
-            <p class="subtitle">Paradas con vistas abiertas y fotograf&iacute;a del valle.</p>
+            <h3>Zonas de descanso y fogata</h3>
+            <p class="subtitle">Espacios para una pausa, picnic y compartir al aire libre.</p>
           </div>
         </div>
         <div class="timeline-step">
@@ -1032,27 +1028,26 @@
           </div>
           <div>
             <h3>Recomendaciones</h3>
-            <p class="subtitle">Calzado cerrado, agua y tiempo para explorar; si acampas, trae tu equipo.</p>
+            <p class="subtitle">Calzado c&oacute;modo, equipo propio si vas a acampar y confirma horarios antes de ir.</p>
           </div>
         </div>
       </div>
 
       <div class="gallery" id="galeria">
-        <figure><img src="public/caligo.webp" alt="RocaVista - bosque"></figure>
-        <figure><img src="public/flores.webp" alt="RocaVista - flores"></figure>
-        <figure><img src="public/lago.webp" alt="RocaVista - lago"></figure>
-        <figure><img src="public/rio.webp" alt="RocaVista - rio"></figure>
+        <figure><img src="public/hongos.webp" alt="Roca Vista: senderos en la naturaleza"></figure>
+        <figure><img src="public/fogata.webp" alt="Roca Vista: &aacute;reas verdes para picnic"></figure>
+        <figure><img src="public/naturaleza.webp" alt="Roca Vista: vista panor&aacute;mica del entorno"></figure>
+        <figure><img src="public/vista.webp" alt="Roca Vista: r&iacute;o y pozas naturales"></figure>
       </div>
     </section>
-
-        <section id="visita">
+    <section id="visita">
       <div class="section-title">Visita</div>
       <h2 class="section-heading">Planea tu visita</h2>
-      <p class="visit-intro">Estamos aqu&iacute; para ayudarte a disfrutar RocaVista con calma: senderos, mirador, r&iacute;o y &aacute;reas verdes para toda la familia.</p>
+      <p class="visit-intro">Tarifas y horarios pueden variar seg&uacute;n temporada o publicaciones. Para evitar sorpresas, confirma antes de ir.</p>
 
       <div class="visit-grid">
         <article class="visit-card">
-          <h3>Informaci&oacute;n general</h3>
+          <h3>Tarifas</h3>
           <ul class="visit-list">
             <li>
               <span class="visit-icon" aria-hidden="true">
@@ -1061,7 +1056,7 @@
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
               </span>
-              Quebradillas, Piedades Sur, San Ram&oacute;n, Alajuela
+              Visita del d&iacute;a: CRC 3.000 por persona
             </li>
             <li>
               <span class="visit-icon" aria-hidden="true">
@@ -1070,7 +1065,7 @@
                   <path d="M12 6v6l4 2"></path>
                 </svg>
               </span>
-              Mi&eacute;rcoles a domingo, 7:00 a.m. a 9:00 p.m. (confirma antes de ir)
+              Ni&ntilde;os menores de 6: gratis
             </li>
             <li>
               <span class="visit-icon" aria-hidden="true">
@@ -1081,7 +1076,7 @@
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </span>
-              Reservas: 8772-3681 &middot; rocavistasyf@gmail.com &middot; Instagram: @rocavista
+              Ni&ntilde;os 7 a 12: CRC 1.500
             </li>
             <li>
               <span class="visit-icon" aria-hidden="true">
@@ -1091,12 +1086,12 @@
                   <line x1="16" y1="6" x2="16" y2="22"></line>
                 </svg>
               </span>
-              Ba&ntilde;os y parqueo seguro (seg&uacute;n disponibilidad). Pagos por SINPE y efectivo.
+              Camping: CRC 5.000 por persona
             </li>
           </ul>
         </article>
         <article class="visit-card">
-          <h3>Tarifas y camping</h3>
+          <h3>Horarios y servicios</h3>
           <ul class="visit-list">
             <li>
               <span class="visit-icon" aria-hidden="true">
@@ -1106,7 +1101,7 @@
                   <line x1="17.5" y1="15" x2="9" y2="15"></line>
                 </svg>
               </span>
-              Visita del d&iacute;a: &#8353;3.000 por persona
+              Mi&eacute;rcoles a domingo, 7:00 a.m. a 9:00 p.m. (seg&uacute;n publicaciones)
             </li>
             <li>
               <span class="visit-icon" aria-hidden="true">
@@ -1114,7 +1109,7 @@
                   <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
                 </svg>
               </span>
-              Ni&ntilde;os menores de 6: gratis
+              Disponibilidad puede variar; confirma antes de ir
             </li>
             <li>
               <span class="visit-icon" aria-hidden="true">
@@ -1124,30 +1119,65 @@
                   <path d="M16 10a4 4 0 0 1-8 0"></path>
                 </svg>
               </span>
-              Ni&ntilde;os de 7 a 12: &#8353;1.500
+              Ba&ntilde;os y parqueo seguro (seg&uacute;n publicaciones)
+            </li>
+          </ul>
+        </article>
+        <article class="visit-card">
+          <h3>Contacto</h3>
+          <ul class="visit-list">
+            <li>
+              <span class="visit-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1 1 18 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              Tel&eacute;fono / reservas: 8772-3681
             </li>
             <li>
               <span class="visit-icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                  <path d="M9 22V12h6v10"></path>
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
                 </svg>
               </span>
-              Camping: &#8353;5.000 por persona (trae tu equipo)
+              Correo: rocavistasyf@gmail.com
+            </li>
+            <li>
+              <span class="visit-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </span>
+              Instagram: @rocavista
+            </li>
+            <li>
+              <span class="visit-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                  <line x1="8" y1="2" x2="8" y2="18"></line>
+                  <line x1="16" y1="6" x2="16" y2="22"></line>
+                </svg>
+              </span>
+              Pago: SINPE y efectivo
             </li>
           </ul>
         </article>
       </div>
 
       <div class="cta-row visit-cta">
-        <a class="btn" href="tel:+50687723681">Reservas</a>
-        <a class="btn btn-secondary" href="mailto:rocavistasyf@gmail.com">Enviar correo</a>
+        <a class="btn" href="tel:+50687723681">Llamar o reservar</a>
+        <a class="btn btn-secondary" href="mailto:rocavistasyf@gmail.com">Escribir correo</a>
       </div>
 
       <div class="location-block">
         <div class="location-heading">
           <h3>Ubicaci&oacute;n</h3>
-          <p>Encu&eacute;ntranos f&aacute;cilmente con nuestras direcciones GPS</p>
+          <p>En Waze/Maps aparece como "RocaVista camping, mirador y senderos"</p>
         </div>
 
         <div class="location-grid">
@@ -1171,8 +1201,8 @@
               </svg>
             </div>
             <h4>Google Maps</h4>
-            <p>En Waze/Maps suele aparecer como &quot;RocaVista camping, mirador y senderos&quot; o &quot;Roca Vista, Piedades Sur&quot;.</p>
-            <a class="location-link" href="https://www.google.com/maps/search/?api=1&query=RocaVista%20camping%2C%20mirador%20y%20senderos%20Piedades%20Sur" target="_blank" rel="noopener">Abrir en Google Maps &rarr;</a>
+            <p>Busca direcciones precisas y navegaci&oacute;n paso a paso.</p>
+            <a class="location-link" href="https://www.google.com/maps/search/?api=1&query=RocaVista%20camping%2C%20mirador%20y%20senderos" target="_blank" rel="noopener">Abrir en Google Maps &rarr;</a>
           </article>
 
           <article class="location-card">
@@ -1184,7 +1214,7 @@
             </div>
             <h4>Waze</h4>
             <p>Navegaci&oacute;n inteligente con alertas de tr&aacute;fico.</p>
-            <a class="location-link" href="https://www.waze.com/ul?q=RocaVista%20camping%2C%20mirador%20y%20senderos%20Piedades%20Sur&navigate=yes" target="_blank" rel="noopener">Abrir en Waze &rarr;</a>
+            <a class="location-link" href="https://www.waze.com/ul?q=RocaVista%20camping%20mirador%20y%20senderos" target="_blank" rel="noopener">Abrir en Waze &rarr;</a>
           </article>
         </div>
       </div>
@@ -1192,7 +1222,7 @@
   </main>
 
   <footer>
-    &copy; 2026 K&Oacute;NTEC DIGITAL MAQUETAS &middot; RocaVista camping, mirador y senderos
+    &copy; 2026 KONTEC DIGITAL
   </footer>
 </body>
 </html>
